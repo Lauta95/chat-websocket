@@ -1,4 +1,4 @@
-<h1>Welcome to your chat</h1>
+<h1>Welcome to Lautaro's CHAT</h1>
 <div>
     <i id="username"></i> <input id="chatbox">
 </div>
@@ -7,4 +7,8 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/static/js/index.js"></script>
+<link rel="stylesheet" href="/static/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&display=swap" rel="stylesheet">
 {{!-- se crea el codigo javascript desde la carpeta utils. lo importamos acá para iniciar la conexion de socket io en index.js. la carpeta publica, en las routes llamamos a los handlebars. es de la carpeta public. el dinamismo en tiempo real se encuentra del lado del servidor, no handlebars. el dinamismo con websocket la página se mantiene allí y se va actualizando el DOM a medida que van llegando los mensajes --}}
