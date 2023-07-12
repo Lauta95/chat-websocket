@@ -2,6 +2,11 @@ const socket = io()
 const chatbox = document.getElementById('chatbox')
 let user = sessionStorage.getItem('user') || ''
 
+function playMessageSound() {
+    const audio = new Audio('/static/js/sent.mp3');
+    audio.play();
+}
+
 if (!user) {
     Swal.fire({
         title: 'Auth',
@@ -27,6 +32,7 @@ if (!user) {
                     message
                 })
                 chatbox.value = ''
+                playMessageSound();
             }
         }
     })
@@ -43,5 +49,5 @@ socket.on('logs', data => {
         messages = `<p><i>${msn.user}</i>: ${msn.message}</p>` + messages
     })
     divLogs.innerHTML = messages
-
+    playMessageSound();
 })
