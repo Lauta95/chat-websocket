@@ -9,7 +9,7 @@ function playMessageSound() {
 
 if (!user) {
     Swal.fire({
-        title: 'Auth',
+        title: 'Welcome',
         input: 'text',
         text: 'Set username',
         inputValidator: value => {
